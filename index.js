@@ -1,10 +1,11 @@
 var employee = {}
+let identity=['name', 'streetAddress'];
 
 
 
 function updateEmployeeWithKeyAndValue(employee, key, value) {
   employee[key] = value;
-  var newEmployee = employee.assign({}, ...employee, {[key]: value});
+  var newEmployee = employee.assign({}, ...arguments(employee, identity,key), {[key]: value});
   return newEmployee;
 }
 
@@ -25,7 +26,3 @@ function updateEmployeeWithKeyAndValue(employee, key, value) {
   delete employee[key];
   return employee;
   }
-
-
-  
-
