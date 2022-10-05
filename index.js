@@ -12,7 +12,7 @@ function updateEmployeeWithKeyAndValue(employee, key, value){
       employee[key] = value;
       return employee;
   }
-  
+
 
   function deleteFromEmployeeByKey(employee, key){
     const nameOfEmployee =  Object.assign({}, employee);
@@ -26,3 +26,4 @@ function updateEmployeeWithKeyAndValue(employee, key, value){
     delete employee[key];
     return employee;
     }
+    
